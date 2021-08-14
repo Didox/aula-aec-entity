@@ -19,9 +19,9 @@
 
 # Componentes instalados:
 ``` bash
-  dotnet add package Microsoft.EntityFrameworkCore --version 5.0.8
-  dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.8
-  dotnet add package Microsoft.EntityFrameworkCore.MySqlServer --version 5.0.1
+  dotnet add package Microsoft.EntityFrameworkCore --version 5.0.9
+  dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.9
+  dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.9
 ```
 
 # Comandos para migração:
