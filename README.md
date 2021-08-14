@@ -22,6 +22,7 @@
   dotnet add package Microsoft.EntityFrameworkCore --version 5.0.9
   dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.9
   dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.9
+  dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 5.0.2
 ```
 
 # Comandos para migração:
@@ -39,5 +40,10 @@ dotnet tool install -g dotnet-aspnet-codegenerator
 # Gerando o scaffold de clientes
 ``` bash
 dotnet aspnet-codegenerator controller -name ClientesController -m Cliente -dc DbContexto --relativeFolderPath Controllers --useDefaultLayout
+
+dotnet aspnet-codegenerator controller -name AlunosController -m Aluno -dc DbContexto --relativeFolderPath Controllers --useDefaultLayout
+
+dotnet aspnet-codegenerator controller -name PedidosController -m Pedido -dc DbContexto --relativeFolderPath Controllers --useDefaultLayout
+
 ```
 
