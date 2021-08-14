@@ -2,30 +2,30 @@
 
 namespace aec_mvc_entity_framework.Migrations
 {
-    public partial class AdicionarAlunos : Migration
+    public partial class ClienteAdd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Alunos",
+                name: "alunos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
+                    id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Matricula = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Notas = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    nome = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
+                    matricula = table.Column<string>(type: "varchar(10)", maxLength: 10, nullable: false),
+                    notas = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Alunos", x => x.Id);
+                    table.PrimaryKey("PK_alunos", x => x.id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Alunos");
+                name: "alunos");
         }
     }
 }

@@ -8,5 +8,7 @@ namespace aec_mvc_entity_framework.Servicos
     public DbContexto(DbContextOptions<DbContexto> options) : base(options) { }
 
     public DbSet<Aluno> Alunos { get; set; }
+    public DbSet<Cliente> Clientes { get; set; }
+    public DbSet<Pedido> Pedidos { get; set; }
   }
 }
