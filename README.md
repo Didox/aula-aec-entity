@@ -24,16 +24,6 @@
   dotnet add package Pomelo.EntityFrameworkCore.MySqlServer --version 5.0.1
 ```
 
-# Instalando mysql no servidor
-``` SQL
-sudo apt install mysql-server
-sudo mysql -u root
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
-CREATE USER 'root'@'127.0.0.1' IDENTIFIED WITH mysql_native_password BY 'root';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'127.0.0.1';
-FLUSH PRIVILEGES;
-```
-
 # Comandos para migração:
 ``` bash
 dotnet tool install --global dotnet-ef
