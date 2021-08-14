@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using aec_mvc_entity_framework.Models;
+using aec_mvc_entity_framework.Servicos;
 
 namespace aec_mvc_entity_framework.Controllers
 {
@@ -18,8 +19,9 @@ namespace aec_mvc_entity_framework.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            ViewBag.Carros = await CarroApiService.GetCarros();
             return View();
         }
 

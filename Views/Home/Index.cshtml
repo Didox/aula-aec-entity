@@ -6,3 +6,41 @@
     <h1 class="display-4">Bem vindo alunos</h1>
     <p>Clique <a href="/alunos">aqui</a> para fazer o seu cadastro.</p>
 </div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Modelo
+            </th>
+            <th>
+                Marca
+            </th>
+            <th>
+                Ano
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carro in (List<Carro>)ViewBag.Carros) {
+        <tr>
+            <td>
+                @carro.Nome
+            </td>
+            <td>
+                @carro.Modelo
+            </td>
+            <td>
+                @carro.marca_id
+            </td>
+            <td>
+                @carro.Ano
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
