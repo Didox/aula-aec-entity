@@ -1,14 +1,21 @@
 @model IEnumerable<aec_mvc_entity_framework.Models.Aluno>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista de alunos";
 }
 
-<h1>Index</h1>
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Lista de alunos</h1>
+        <p class="lead text-muted">Está é uma sessão para criar os alunos que terão os seus pedidos.</p>
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Criar novo aluno</a>
+        </p>
+        </div>
+    </div>
+</section>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -37,9 +44,9 @@
                 @Html.DisplayFor(modelItem => item.Notas)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-success" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Apagar</a>
             </td>
         </tr>
 }
